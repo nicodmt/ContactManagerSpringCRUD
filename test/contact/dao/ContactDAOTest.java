@@ -1,5 +1,6 @@
 package contact.dao;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -43,7 +44,7 @@ class ContactDAOTest {
 	void testGet() {
 		Integer id = 1;
 		Contact contact = dao.get(id);
-		if(contact != null) {
+		if (contact != null) {
 			System.out.println(contact);
 		}
 		assertNotNull(contact);
@@ -51,7 +52,9 @@ class ContactDAOTest {
 
 	@Test
 	void testDelete() {
-		fail("Not yet implemented");
+		Integer id = 2;
+		int result = dao.delete(id);
+		assertTrue(result > 0);
 	}
 
 	@Test
