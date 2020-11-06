@@ -23,9 +23,9 @@ public class ContactDAOImpl implements ContactDAO{
 	}
 
 	@Override
-	public int update(Contact contact) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int update(Contact c) {
+		String sql = "UPDATE Contact SET name=?, email=?, address=?, phone=? WHERE contact_id=?";
+		return jdbcTemplate.update(sql, c.getName(), c.getEmail(), c.getAddress(), c.getPhone(), c.getId());
 	}
 
 	@Override
