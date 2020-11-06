@@ -3,6 +3,8 @@ package contact.dao;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.List;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -35,7 +37,7 @@ class ContactDAOTest {
 
 	@Test
 	void testUpdate() {
-		Contact contact = new Contact(2, "Bill Gates", "bill.gates@microsoft.com", "Redmon, WA", "1800123456789");
+		Contact contact = new Contact(3, "Bill Gates", "bill.gates@microsoft.com", "Redmon, WA", "1800123456789");
 		int result = dao.update(contact);
 		assertTrue(result > 0);
 	}
@@ -59,7 +61,11 @@ class ContactDAOTest {
 
 	@Test
 	void testList() {
-		fail("Not yet implemented");
+		List<Contact> listContacts = dao.list();
+		for (Contact contact : listContacts) {
+			System.out.println(contact);
+		}
+		assertTrue(!listContacts.isEmpty());
 	}
 
 }
