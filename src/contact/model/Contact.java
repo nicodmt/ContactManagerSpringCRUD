@@ -8,8 +8,10 @@ public class Contact {
 	private String phone;
 
 	public Contact(Integer id, String name, String email, String address, String phone) {
-		super();
+		this(name, email, address, phone);
 		this.id = id;
+	}
+	public Contact(String name, String email, String address, String phone) {
 		this.name = name;
 		this.email = email;
 		this.address = address;
