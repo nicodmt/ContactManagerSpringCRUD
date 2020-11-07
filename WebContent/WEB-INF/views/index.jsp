@@ -27,6 +27,9 @@
 					<td>${contact.email}</td>
 					<td>${contact.address}</td>
 					<td>${contact.phone}</td>
+					<td>
+						<a href="edit?id=${contact.id}">Edit</a>
+					</td>
 				</tr>
 			</c:forEach>
 		</table>

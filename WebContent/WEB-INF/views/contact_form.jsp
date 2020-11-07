@@ -13,6 +13,7 @@
 		<h1>New/Edit Contact</h1>
 		<form:form action="save" method="post" modelAttribute="contact">
 			<table cellpadding="6">
+			<form:hidden path="id"/>
 				<tr>
 					<td>Name:</td>
 					<td><form:input path="name" /></td>

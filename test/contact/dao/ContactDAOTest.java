@@ -54,7 +54,7 @@ class ContactDAOTest {
 
 	@Test
 	void testDelete() {
-		Integer id = 2;
+		Integer id = 8;
 		int result = dao.delete(id);
 		assertTrue(result > 0);
 	}
