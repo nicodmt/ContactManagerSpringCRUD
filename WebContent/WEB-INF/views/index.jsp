@@ -29,6 +29,8 @@
 					<td>${contact.phone}</td>
 					<td>
 						<a href="edit?id=${contact.id}">Edit</a>
+						&nbsp;&nbsp;
+						<a href="delete?id=${contact.id}">Delete</a>
 					</td>
 				</tr>
 			</c:forEach>
